@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Mayor</title>
+</head>
+
+<body>
+    <h1>NÚMERO MAYOR</h1>
+    <button onclick="mayornumero()">Añadir número</button><br><br>
+    <script type="text/javascript">
+        function mayornumero() {
+            var numero1 = parseInt(prompt("Ingrese el primer número"));
+            var numero2 = parseInt(prompt("Ingrese el segundo número"));
+            var numero3 = parseInt(prompt("Ingrese el tercer número"));
+            alert("El primer número es: " + numero1);
+            alert("El segundo número es: " + numero2);
+            alert("El tercer número es: " + numero3);
+            var mayor = Math.max(numero1, numero2, numero3);
+            alert("El número mayor es: " + mayor);
+        }
+    </script>
+</body>
+
+</html>

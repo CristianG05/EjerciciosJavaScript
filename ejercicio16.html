@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Cuadratica</title>
+</head>
+
+<body>
+    <h1>ECUACIÓN CUADRÁTICA</h1>
+    <button onclick="cuadratica()">Hallar función</button><br><br>
+    <script type="text/javascript">
+        function cuadratica() {
+            var a = parseInt(prompt("Ingrese el valor de a"));
+            var b = parseInt(prompt("Ingrese el valor de b"));
+            var c = parseInt(prompt("Ingrese el valor de c"));
+            var negb= b*-1;
+            var potb=Math.pow(b,2);
+            var axc=a*c*4;
+            var subtotal= potb - axc;
+            var raiz=Math.sqrt(subtotal);
+            var respuesta1= ((negb - raiz)/(2*a));
+            var respuesta2= ((negb + raiz)/(2*a));
+            alert("X1: " + respuesta2 + "\nX2: " + respuesta1);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Bisiesto</title>
+</head>
+
+<body>
+    <h1>AÑO BISIESTO</h1>
+    <button onclick="bisiesto()">Encontrar bisiesto</button><br><br>
+    <script type="text/javascript">
+        function bisiesto() {
+            var año = parseInt(prompt("Ingrese el año"));
+            if (((año % 4 == 0) && (año % 100 != 0)) || (año % 400 == 0)) {
+                alert("EL AÑO " + año + " ES BISIESTO");
+            } else {
+                alert("EL AÑO " + año + " NO ES BISIESTO");
+            }
+        }
+    </script>
+</body>
+
+</html>

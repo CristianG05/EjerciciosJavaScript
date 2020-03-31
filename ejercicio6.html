@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Nómina</title>
+</head>
+
+<body>
+    <h1>NÓMINA SENCILLA</h1>
+    <button onclick="nomina()">Encontrar valor mínimo mensual</button><br><br>
+    <script type="text/javascript">
+        function nomina() {
+            var nombre = prompt("Ingrese nombre");
+            var horas = parseInt(prompt("Ingrese número de horas trabajadas"));
+            var vhora = parseInt(prompt("Ingrese el valor x hora"));
+            var vsalario = parseInt(prompt("Ingrese el valor del salario mínimo"));
+            var salariomensual = horas * vhora;
+            if (salariomensual > vsalario) {
+                alert("Nombre: " + nombre + "\nSalario Mensual: " + salariomensual);
+            } else {
+                alert("Nombre: " + nombre);
+            }
+        }
+    </script>
+</body>
+
+</html>

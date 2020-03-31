@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Serie de Taylor</title>
+</head>
+
+<body>
+    <h1>SERIE DE TAYLOR</h1>
+    <button onclick="serietaylor()">Hallar factorial</button><br><br>
+    <script type="text/javascript">
+        function serietaylor() {
+            var terminos = parseInt(prompt("¿Cuántos términos deseas?"));
+            var x = parseInt(prompt("Ingresa el valor de x"));
+            var fact = 1, total = 0, pot, aux, op;
+            for (var i = 0; i < terminos; i++) {
+                pot = Math.pow(x, i);
+                aux = i;
+                for (var j = 0; j < i; j++) {
+                    fact = fact * aux;
+                    aux = aux - 1;
+                }
+                op = pot / fact;
+                total = total + op;
+            }
+            alert("F(x): " + total);
+        }
+    </script>
+</body>
+
+</html>

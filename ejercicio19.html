@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Primo</title>
+</head>
+
+<body>
+    <h1>NÚMERO PRIMO</h1>
+    <button onclick="hallarPrimo()">Hallar número primo</button><br><br>
+    <script type="text/javascript">
+        function hallarPrimo() {
+            var numero = parseInt(prompt("Ingrese número"));
+            var primo;
+            for (var i = 2; i < numero; i++) {
+                if (numero % i == 0) {
+                    primo = false;
+                }
+            }
+            if (primo == true) {
+                alert("El número" + numero + " es PRIMO.");
+            } else {
+                alert("El número " + numero + " NO es PRIMO.");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Descuento</title>
+</head>
+
+<body>
+    <h1>DESCUENTOS</h1>
+    <button onclick="descuento()">Encontrar valor total</button><br><br>
+    <script type="text/javascript">
+        function descuento() {
+            var cantidad = parseInt(prompt("Número de escritorios"));
+            if (cantidad < 5) {
+                var total = 650000 * cantidad;
+                var desc = ((total * 10) / 100);
+                var totalneto = total - desc;
+                alert("Cantidad de escritorios a comprar: " + cantidad + "\nEl descuento aplicado es de: 10%\nEl valor a pagar es: " + totalneto);
+            } else if (cantidad >= 5 && cantidad < 10) {
+                var total = 650000 * cantidad;
+                var desc = ((total * 20) / 100);
+                var totalneto = total - desc;
+                alert("Cantidad de escritorios a comprar: " + cantidad + "\nEl descuento aplicado es de: 20%\nEl valor a pagar es: " + totalneto);
+            } else if (cantidad >= 10) {
+                var total = 650000 * cantidad;
+                var desc = ((total * 40) / 100);
+                var totalneto = total - desc;
+                alert("Cantidad de escritorios a comprar: " + cantidad + "\nEl descuento aplicado es de: 40%\nEl valor a pagar es: " + totalneto);
+            }
+        }
+    </script>
+</body>
+
+</html>

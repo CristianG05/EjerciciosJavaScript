@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>factorial</title>
+</head>
+
+<body>
+    <h1>FACTORIAL</h1>
+    <button onclick="factorial()">Hallar factorial</button><br><br>
+    <script type="text/javascript">
+        function factorial() {
+            var numero = parseInt(prompt("Ingresa el número para el factorial"));
+            var aux = numero;
+            var fact = 1;
+            if (numero == 0) {
+                alert("El factorial del número " + numero + " es: 1");
+            } else {
+                for (var i = 0; i < numero; i++) {
+                    fact = fact * aux;
+                    aux = aux - 1;
+                }
+                alert("El factorial del número " + numero + " es: " + fact);
+            }
+        }
+    </script>
+</body>
+
+</html>

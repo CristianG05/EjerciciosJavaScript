@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Ordenar</title>
+</head>
+
+<body>
+    <h1>ORDENAR TRES NÚMEROS</h1>
+    <button onclick="ordenar()">Ordenar números</button><br><br>
+    <script type="text/javascript">
+        function ordenar() {
+            var a = parseInt(prompt("Ingrese el primer número"));
+            var b = parseInt(prompt("Ingrese el segundo número"));
+            var c = parseInt(prompt("Ingrese el tecer número"));
+            if (a == b) {
+                if (b == c)
+                    alert('Los tres números son iguales');
+            }
+            if ((a > b) && (b > c)) {
+                alert("El número mayor es: " + a);
+                alert("El número del medio es: " + b);
+                alert("El número menor: " + c);
+            }
+            if ((a > c) && (c > b)) {
+                alert("El número mayor es: " + a);
+                alert("El número del medio es: " + c);
+                alert("El número menor: " + b);
+            }
+            if ((b > a) && (a > c)) {
+                alert("El número mayor es: " + b);
+                alert("El número del medio es: " + a);
+                alert("El número menor: " + c);                
+            }
+            if ((b > c) && (c > a)) {
+                alert("El número mayor es: " + b);
+                alert("El número del medio es: " + c);
+                alert("El número menor: " + a);
+            }
+            if ((c > a) && (a > b)) {
+                alert("El número mayor es: " + c);
+                alert("El número del medio es: " + a);
+                alert("El número menor: " + b);
+            }
+            if ((c > b) && (b > a)) {
+                alert("El número mayor es: " + c);
+                alert("El número del medio es: " + b);
+                alert("El número menor: " + a);
+            }
+        }
+    </script>
+</body>
+
+</html>

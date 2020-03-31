@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Fibonacci</title>
+</head>
+
+<body>
+    <h1>FIBONACCI</h1>
+    <button onclick="boton()">Hallar serie</button><br><br>
+    <script type="text/javascript">
+        var sumatoria=0;
+        function fibonacci(numero) {
+            var numeros = [0, 1];
+            for (var i = 2; i <= numero; i++) {
+                numeros[i] = numeros[i - 2] + numeros[i - 1];
+            }
+            for (var j = 0; j <= numero; j++) {
+                sumatoria = sumatoria + numeros[j];
+            }
+            return numeros;
+
+        }
+        function boton() {
+            var terminos = parseInt(prompt("Ingrese los términos que requiere"));
+            alert("Fibonacci: " + fibonacci(terminos) + "\nSumatoria: "+ sumatoria);
+        }
+    </script>
+</body>
+
+</html>

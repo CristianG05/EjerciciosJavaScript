@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Matricula</title>
+</head>
+
+<body>
+    <h1>VALOR MATRÍCULA</h1>
+    <button onclick="matricula()">Encontrar valor matrícula</button><br><br>
+    <script type="text/javascript">
+        function matricula() {
+            var cantidadcreditos = parseInt(prompt("Ingrese el número de créditos"));
+            var estrato = parseInt(prompt("Ingrese el estrato"));
+            var total, valorsub = 0;
+            if (cantidadcreditos <= 20) {
+                var costo = cantidadcreditos * 85000;
+                if (estrato == 1) {
+                    var desc = ((costo * 80) / 100);
+                    total = costo - desc;
+                    valorsub = 200000;
+                } else if (estrato == 2) {
+                    var desc = ((costo * 50) / 100);
+                    total = costo - desc;
+                    valorsub = 100000;
+                } else if (estrato == 3) {
+                    var desc = ((costo * 30) / 100);
+                    total = costo - desc;
+                }
+                alert("Cantidad de créditos: " + cantidadcreditos + "\nValor crédito: 85000\nEstrato del estudiante: " + estrato +
+                    "\nCosto de la matricula: " + total + "\nValor Subsidio: " + valorsub)
+            } else {
+                var cantidadextra = cantidadcreditos - 20;
+                var valorextra = cantidadextra * 85000;
+                var valorcreditos = valorextra * 2;
+                var costosim = 20 * 85000;
+                var costotal = costosim + valorcreditos;
+                if (estrato == 1) {
+                    var desc = ((costotal * 80) / 100);
+                    total = costotal - desc;
+                    valorsub = 200000;
+                } else if (estrato == 2) {
+                    var desc = ((costotal * 50) / 100);
+                    total = costotal - desc;
+                    valorsub = 100000;
+                } else if (estrato == 3) {
+                    var desc = ((costotal * 30) / 100);
+                    total = costotal - desc;
+                }
+                alert("Cantidad de créditos: " + cantidadcreditos + "\nValor crédito: 85000\nEstrato del estudiante: " + estrato +
+                    "\nCosto de la matricula: " + total + "\nValor subsidio: " + valorsub)
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Envío Mercancias</title>
+</head>
+
+<body>
+    <h1>ENVÍO MERCANCÍAS</h1>
+    <button onclick="envio()">Encontrar valor total</button><br><br>
+    <script type="text/javascript">
+        function envio() {
+            var tarifa, descuento, promocion = 0, aux = 0, total;
+            var peso = parseInt(prompt("Ingrese el peso de la mercancía"));
+            var valor = parseInt(prompt("Ingrese el valor de la mercancía"));
+            var lunes = prompt("Es lunes [S]í [N]o");
+            var tipopago = prompt("Tipo de pago [E]fectivo [T]arjeta");
+            if (peso < 100) {
+                tarifa = 20000;
+            } else if (peso >= 100 && peso <= 150) {
+                tarifa = 25000;
+            } else if (peso > 150 && peso <= 200) {
+                tarifa = 30000;
+            } else if (peso > 200) {
+                var pesoextra = peso - 200;
+                var valor = (parseInt(pesoextra / 10) * 2000);
+                tarifa = 35000 + valor;
+            }
+
+            if (lunes == 's' && tipopago == 't') {
+                aux = 1;
+            } else if (tipopago == 'e' && valor >= 1000000) {
+                aux = 2;
+            }
+
+            alert(aux);
+            if (aux == 0) {
+                if (valor > 300000 && valor < 600000) {
+                    descuento = tarifa * 0.1;
+                } else if (valor > 600000 && valor <= 1000000) {
+                    descuento = tarifa * 0.2;
+                } else if (valor > 1000000) {
+                    descuento = tarifa * 0.3;
+                }
+                total = tarifa - descuento;
+                alert("Tarifa: " + tarifa + "\nDescuento: " + descuento + "\nTotal a pagar: " + total);                
+            } else {
+                if (aux == 1) {
+                    promocion = tarifa * 0.5;
+                } else if (aux == 2) {
+                    promocion = tarifa * 0.6;
+                }
+                var total = tarifa - promocion;
+                alert("Tarifa: " + tarifa + "\nPromoción: " + promocion + "\nTotal a pagar: " + total);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

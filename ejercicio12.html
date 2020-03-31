@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>sumatoria</title>
+</head>
+
+<body>
+    <h1>SERIE DE NÚMEROS, SUMATORIA Y PROMEDIO</h1>
+    <button onclick="sumatoria()">Hallar sumatoria</button><br><br>
+    <script type="text/javascript">
+        function sumatoria() {
+            var numero = parseInt(prompt("Ingrese la cantidad de números"));
+            var serie = new Array();
+            var suma = 0, aux = 0, promedio;
+            for (var i = 0; i <= numero; i++) {
+                serie[i] = i;
+                suma = suma + i;
+                promedio = suma / numero;
+            }
+            for (var j = 0; j <= numero; j++) {
+                document.write(serie[j] + "  ");
+                aux++;
+                if (aux%15 == 0) {
+                    document.write("<br/>");
+                }
+            }
+
+            document.write("<br/><br/>La sumatoria es: " + suma + "<br/>El promedio es: " + promedio);
+        }
+    </script>
+</body>
+
+</html>

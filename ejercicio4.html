@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Múltiplo</title>
+</head>
+<body>
+    <h1>MÚLTIPLO DE OTRO</h1>
+    <button onclick="multiplo()">Hallar múltiplo</button><br><br>
+    <script type="text/javascript">
+    function multiplo(){
+        var numero1 = parseInt(prompt("Ingrese el primer número"));
+        var numero2 = parseInt(prompt("Ingrese el segundo número"));
+        if(numero1 % numero2 == 0){
+            alert("EL NÚMERO " + numero1 + " ES MÚLTIPLO DE " + numero2);
+        }else{
+            alert("EL NÚMERO " + numero1 + " NO ES MÚLTIPLO DE " + numero2)
+        }
+    }
+    </script>
+</body>
+</html>
